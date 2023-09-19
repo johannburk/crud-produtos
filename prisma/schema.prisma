@@ -1,0 +1,15 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model produtos {
+  id_produto   Int      @id @default(autoincrement())
+  nome_produto String   @db.VarChar(255)
+  quantidade   Int
+  preco        Decimal? @db.Decimal(5, 2)
+}

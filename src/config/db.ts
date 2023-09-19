@@ -15,3 +15,10 @@ pool.on('connect', () => {
 module.exports = {
   query: (text: any, params: any) => pool.query(text, params),
 };
+
+export default {
+  HOST: "localhost",
+  USER: "root",
+  PASSWORD: "admin1234",
+  DB: "crudprodutoa"
+};
